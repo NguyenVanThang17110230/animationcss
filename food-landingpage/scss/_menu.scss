@@ -1,0 +1,15 @@
+//
+.menu{
+    padding-top:80px;
+    .content{
+        .box{ 
+            width: 500px;
+            margin: 15px;
+            border: 15px solid $font-color;
+            box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+            .imgBx{
+                height: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,205 @@
+header{
+    position: relative;
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 200px;
+        padding-right: 200px;
+        .group-logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logo{
+                height: 100%;
+                width: 200px;
+                img{
+                    object-fit: cover;
+                    transform: scale(0.9);
+                }
+            }
+            .navigation{
+                position: relative;
+                ul{
+                    display: flex;
+                    li{
+                        list-style: none;
+                        padding: 12px 12px;
+                        transition: 0.2s;
+                        a{
+                            text-decoration: none;
+                            color: $black;
+                            font-size: 0.9em;
+                            text-transform: uppercase;
+                            transition: 0.2s;
+                        }
+                        &:hover{
+                            a{
+                                color: $red;
+                                box-shadow: 0 5px 0 $red;
+                            }
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+            }
+        }
+        .group-search{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .search,.cart,.account,.sitting{
+                position: relative;
+                margin: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon{
+                    position: relative;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    i{
+                        font-style:initial;
+                        color: #444;
+                    }
+                }
+                .title{
+                    position: absolute;
+                    top: 60px;
+                    left: 50%;
+                    transform: translate(-50%,15%);
+                    font-size: 0.8em;
+                    text-align: center;
+                    white-space: nowrap;
+                    background: $white;
+                    width: auto;
+                    padding: 6px 10px;
+                    border-radius: 6px;
+                    box-shadow:  0 5px 15px rgba(0,0,0,0.1);
+                    transition: 0.2s;
+                    opacity: 0;
+                    visibility: hidden;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background:$white;
+                        top: 0px;
+                        transform: rotate(45deg) translateX(-50%);
+                        left: 50%;
+                        border-radius: 2px;
+                        
+                    }
+                }
+                &:hover{
+                    .title{
+                        opacity: 1;
+                        visibility: visible;
+                        top:50px;
+                        z-index: 100;
+                    }
+                }
+            }
+            .search{
+                .search-box{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 120px;
+                    background: #ffffff;
+                    color: #777777;
+                    display: block;
+                    visibility: hidden;
+                    opacity: 0;
+                    z-index: 999;
+                    transition: 0.5s;
+                    @include center;
+                    .container{
+                        width: 80%;
+                        padding: 20px;
+                        @include center;
+                        flex-direction: column;
+                        .info-search{
+                            width: 80%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .title-search{
+                                font-size: 0.8em;
+                            }
+                            .close{
+                                position: relative;    
+                                height: 1px;
+                                width: 15px;
+                                background: $gray;
+                                transform: rotate(45deg);
+                                font-size: 14px;
+                                cursor: pointer;
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 1px;
+                                    width: 15px;
+                                    background: $gray;
+                                    transform: rotate(90deg);
+                                }
+                            }
+                            
+        
+                        }
+                        .input-search{
+                            margin-top: 10px;
+                            width: 80%;
+                            position: relative;
+                            input{
+                                position: relative;
+                                width: 100%;
+                                outline: none;
+                                border: none;
+                                border-bottom:1px solid rgba(128, 128, 128, 0.377);
+                                height: 50px;
+                                font-size: 1.6em;
+                                &::placeholder{
+                                    text-transform: uppercase;
+                                    font-size: 1em;
+                                    color: $black;
+                                    font-weight: 500;
+                                }
+                            }
+                            i{
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+                .search-box.activeS{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    &.sticky{
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 10000;
+       background:$white;
+    }   
+}
+

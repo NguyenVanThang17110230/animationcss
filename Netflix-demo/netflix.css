@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+header{
+    width: 100%;
+    max-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    max-height: 115px;
+}
+.menu-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    padding:7px 17px 7px 17px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: aqua;
+}
+.button-login{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+    margin-left: 30px;
+    background: red;
+    font-size: 15px;
+    cursor: pointer;
+    height: 33px;
+}
+.button-outline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 5px 8px 5px 8px;
+    font-size: 13px;
+    text-align: center;
+    height: 35px;
+    
+}
+.button-outline::before{ 
+    font-family: "FontAwesome";
+    content: "\f0ac";
+    font-size: 12px;
+    color: #fff;
+    margin-left: 1px;
+    margin-right: 5px;
+}
+.button-outline::after{
+    font-family: "FontAwesome";
+    content: "\f0d7";
+        font-size: 20px;
+        color: #fff ;
+    text-align: right;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+.banner .nen{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    position: absolute;
+    z-index: 2;
+}
+.banner .img-banner{
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    color: #fff;
+    text-align: center;
+}
+.info-big{
+    font-weight: 800;
+    font-size: 48Px;
+    
+}
+.info-min{
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 800;
+    
+}
+.info-min-min{
+    display: block;
+    margin-top: 15px;
+    line-height: 2;
+    
+    font-size: 20px;
+}
+.group-input{
+    margin-top:15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.input-email{
+    width: 500px;
+    height: 62px;
+    padding-left: 15px;
+}
+.input-email::placeholder{
+    
+    color: rgba(128, 128, 128, 0.849);
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.input-email:focus{
+    outline: none;
+}
+.get-start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 200px;
+    font-size: 25px;
+    letter-spacing: -1.5px;
+    cursor: pointer;
+}

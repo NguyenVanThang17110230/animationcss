@@ -1,0 +1,14 @@
+//@at-root
+.expert{
+    padding-top: 80px;
+    .content{
+        flex-direction: row;
+        .box{
+            width: 250px;
+            margin: 15px;
+            .imgBx{
+                height: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+
+//
+.about{
+    padding: 100px;
+    .row{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .col50{
+            position: relative;
+            width: 48%;
+        }
+    }   
+}
